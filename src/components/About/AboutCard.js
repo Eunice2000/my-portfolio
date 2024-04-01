@@ -8,8 +8,8 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple"> Adediran Eunice Adebukola, a passionate DevOps engineer hailing</span>
-             from <span className="purple"> Lagos state, Nigeria.</span>
+            Hi Everyone, I am <span className="purple"> Adediran Eunice Adebukola, a passionate DevOps engineerand software engineer based in </span>
+             <span className="purple"> Lagos state, Nigeria.</span>
             <br />
             <br />
             Armed with a degree in Computer Science from university, I have immersed myself in the world of technology, specializing in the intricate fusion of development and operations.
