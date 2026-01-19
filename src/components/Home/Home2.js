@@ -8,6 +8,8 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { SiFiverr, SiUpwork } from "react-icons/si";
+import selarLogo from "../../Assets/selar-logo-small.png";
 
 function Home2() {
   return (
@@ -102,6 +104,40 @@ function Home2() {
                   <AiFillInstagram />
                 </a>
               </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.fiverr.com/eunice_services?public_mode=true"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <SiFiverr />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.upwork.com/freelancers/~0150d78b719a890f01"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <SiUpwork />
+                </a>
+              </li>
+              <li className="social-icons">
+              <a
+                href="https://selar.com/m/adediraneunice"
+                target="_blank"
+                rel="noreferrer"
+                className="icon-colour home-social-icons"
+              >
+                <img
+                  src={selarLogo}
+                  alt="Selar"
+                  style={{ width: "22px", height: "22px" }}
+                />
+              </a>
+            </li>
             </ul>
           </Col>
         </Row>
