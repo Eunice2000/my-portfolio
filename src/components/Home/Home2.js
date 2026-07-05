@@ -1,143 +1,119 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/ejsk.png";
-import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
+  AiOutlineDeploymentUnit,
+  AiOutlineSafety,
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
-import { SiFiverr, SiUpwork } from "react-icons/si";
+import { FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { SiFiverr, SiUpwork, SiTerraform, SiPrometheus } from "react-icons/si";
 import selarLogo from "../../Assets/selar-logo-small.png";
+
+const strengths = [
+  {
+    icon: <AiOutlineDeploymentUnit />,
+    title: "Release Automation",
+    text: "I design CI/CD pipelines that make build, test, scan, and deploy flows repeatable across environments.",
+  },
+  {
+    icon: <SiTerraform />,
+    title: "Infrastructure as Code",
+    text: "I provision cloud infrastructure with Terraform, CloudFormation, and Ansible so teams can scale with consistency.",
+  },
+  {
+    icon: <AiOutlineSafety />,
+    title: "DevSecOps Mindset",
+    text: "I bring security earlier into delivery through secret management, code quality checks, and safer deployment practices.",
+  },
+  {
+    icon: <SiPrometheus />,
+    title: "Observability",
+    text: "I set up monitoring with tools like Prometheus, Grafana, and Loki so systems are easier to understand and improve.",
+  },
+];
 
 function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
-        <Row>
-          <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              GET TO <span className="purple"> KNOW  </span> ME
-            </h1>
-            <p className="home-about-body">
-            Hooked on automation (you name a tool, I've probably played with it!)… 🤷‍♂️
-              <br />
-              <br />I bridge the gap between devs and ops, ensuring smooth deployments with monitoring 
-              <i>
-                <b className="purple"> (think fancy dashboards) and IaC (infrastructure as code, because who needs manual setup?). </b>
-              </i>
-              <br />
-              <br />
-              Security champion by day, automation architect by night! &nbsp;
-              <i>
-                <b className="purple"> I bridge the gap between development and operations with secure and efficient deployments (DevSecOps practices, Jenkins, GitHub Actions). </b> My passion lies in building {" "}
-                <b className="purple">
-                robust and scalable DevOps solutions that empower innovation.
-                </b>
-              </i>
-              <br />
-              <br />
-              Driven by a passion for efficiency, I leverage automation (Jenkins, GitHub Actions), code analysis ( sonarqube) testing (cypress) containerization (Docker, Kubernetes),  <b className="purple">scripting (python)</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  monitoring (Grafana, Prometheus) 
-                </b>
-              </i>
-              &nbsp; to
-              <i>
-                <b className="purple"> build robust DevOps pipelines.</b>
-              </i>
+        <Row className="section-intro">
+          <Col lg={9}>
+            <p className="eyebrow">What I Bring</p>
+            <h2>
+              Practical DevOps engineering for teams that care about uptime,
+              speed, and security.
+            </h2>
+            <p>
+              My work sits where development, operations, and cloud architecture
+              meet. I enjoy building the delivery systems behind great products:
+              pipelines, infrastructure, monitoring, and documentation that make
+              engineering teams move with more confidence.
             </p>
           </Col>
-          <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
-            </Tilt>
-          </Col>
         </Row>
+
+        <Row className="strength-grid">
+          {strengths.map((item) => (
+            <Col md={6} lg={3} key={item.title}>
+              <article className="strength-card">
+                <div className="strength-icon">{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            </Col>
+          ))}
+        </Row>
+
         <Row>
           <Col md={12} className="home-about-social">
-            <h1>CONNECT WITH ME ON</h1>
+            <h2>Let’s build something reliable.</h2>
             <p>
-              Feel free to <span className="purple">connect </span>with me
+              Connect with me for DevOps projects, cloud infrastructure work,
+              technical writing, or automation consulting.
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
-                <a
-                  href="https://github.com/Eunice2000"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
+                <a href="https://github.com/Eunice2000" target="_blank" rel="noreferrer" className="icon-colour home-social-icons" aria-label="GitHub">
                   <AiFillGithub />
                 </a>
               </li>
               <li className="social-icons">
-                <a
-                  href="https://twitter.com/eunice_adediran"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
+                <a href="https://twitter.com/eunice_adediran" target="_blank" rel="noreferrer" className="icon-colour home-social-icons" aria-label="Twitter">
                   <AiOutlineTwitter />
                 </a>
               </li>
               <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/eunice-adediran-b409b61b1/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
+                <a href="https://www.linkedin.com/in/eunice-adediran-b409b61b1/" target="_blank" rel="noreferrer" className="icon-colour home-social-icons" aria-label="LinkedIn">
                   <FaLinkedinIn />
                 </a>
               </li>
               <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/adediran.eunice/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
+                <a href="https://www.instagram.com/adediran.eunice/" target="_blank" rel="noreferrer" className="icon-colour home-social-icons" aria-label="Instagram">
                   <AiFillInstagram />
                 </a>
               </li>
               <li className="social-icons">
-                <a
-                  href="https://www.fiverr.com/eunice_services?public_mode=true"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
+                <a href="https://www.fiverr.com/eunice_services?public_mode=true" target="_blank" rel="noreferrer" className="icon-colour home-social-icons" aria-label="Fiverr">
                   <SiFiverr />
                 </a>
               </li>
               <li className="social-icons">
-                <a
-                  href="https://www.upwork.com/freelancers/~0150d78b719a890f01"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
+                <a href="https://www.upwork.com/freelancers/~0150d78b719a890f01" target="_blank" rel="noreferrer" className="icon-colour home-social-icons" aria-label="Upwork">
                   <SiUpwork />
                 </a>
               </li>
               <li className="social-icons">
-              <a
-                href="https://selar.com/m/adediraneunice"
-                target="_blank"
-                rel="noreferrer"
-                className="icon-colour home-social-icons"
-              >
-                <img
-                  src={selarLogo}
-                  alt="Selar"
-                  style={{ width: "22px", height: "22px" }}
-                />
-              </a>
-            </li>
+                <a href="https://www.youtube.com/@NicesTechWorld" target="_blank" rel="noreferrer" className="icon-colour home-social-icons" aria-label="YouTube">
+                  <FaYoutube />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a href="https://selar.com/m/adediraneunice" target="_blank" rel="noreferrer" className="icon-colour home-social-icons" aria-label="Selar">
+                  <img src={selarLogo} alt="" />
+                </a>
+              </li>
             </ul>
           </Col>
         </Row>
