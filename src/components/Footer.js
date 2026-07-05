@@ -5,7 +5,7 @@ import {
   AiOutlineTwitter,
   AiFillInstagram,
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaYoutube } from "react-icons/fa";
 
 function Footer() {
   let date = new Date();
@@ -59,6 +59,17 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <AiFillInstagram />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.youtube.com/@NicesTechWorld"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <FaYoutube />
               </a>
             </li>
           </ul>
